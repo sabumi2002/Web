@@ -1,9 +1,11 @@
+/* COMMON */
 body {
   color: #333;
   font-size: 16px;
   font-weight: 400;
   line-height: 1.4;
   font-family: 'Nanum Gothic', sans-serif;
+  height: 3000px;
 }
 
 img {
@@ -16,19 +18,80 @@ a {
   /* text 밑줄 제거 */
 }
 
-/* HEADER */
-header {
-  background-color: #f6f5f0;
-  border-bottom: 1px solid #c8c8c8;
-}
-
-header .inner {
+.inner {
   width: 1100px;
-  height: 120px;
   margin: 0 auto;
   /* 위아래값은 고정, 좌우값은 자동으로 조정 */
   position: relative;
   /* 해당영역 배치 */
+}
+.btn {
+  width: 130px;
+  padding: 10px;
+  border: 2px solid #333;
+  border-radius: 4px;
+  color: #333;
+  font-size: 16px;
+  font-weight: 700;
+  text-align: center;
+  cursor: pointer;
+  box-sizing: border-box;
+  /* padding, border가 들어간만큼 요소가 커지지 않게 고정 */
+  display: block;
+  transform: .4s;
+}
+.btn:hover {
+  background-color: #333;
+  color: #fff;
+}
+.btn.btn--reverse{
+  background-color: #333;
+  color: #fff;
+}
+.btn.btn--reverse:hover{
+  background-color: transparent;
+  /* transparent- 투명 */
+  color: #333;
+}
+.btn.btn--brown{
+  color: #592B18;
+  border-color: #592B18;
+}
+.btn.btn--brown:hover{
+  color: #fff;
+  background-color: #592B18;
+}
+.btn.btn--gold{
+  color: #d9aa8a;
+  border-color: #d9aa8a;
+}
+.btn.btn--gold:hover{
+  color: #fff;
+  background-color: #d9aa8a;
+}
+.btn.btn--white{
+  color: #fff;
+  border-color: #fff;
+}
+.btn.btn--white:hover{
+  color: #333;
+  background-color: #fff;
+}
+
+
+/* HEADER */
+header {
+  width: 100%;
+  background-color: #f6f5f0;
+  border-bottom: 1px solid #c8c8c8;
+  position: fixed;
+  top: 0;
+  z-index: 9;
+}
+
+/* > 자식선택자 */
+header>.inner {
+  height: 120px;
 }
 
 header .logo {
@@ -132,4 +195,164 @@ header .sub-menu .search .material-icons {
 header .sub-menu .search.focused .material-icons {
   opacity: 0;
   /* icon을 사라지게 만듬 */
+}
+
+header .main-menu {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+  display: flex;
+}
+
+header .main-menu .item {}
+
+header .main-menu .item .item__name {
+  padding: 10px 20px 34px 20px;
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+}
+
+header .main-menu .item:hover .item__name {
+  background-color: #2c2a29;
+  color: #669900;
+  border-radius: 6px 6px 0 0;
+}
+
+header .main-menu .item .item__contents {
+  width: 100%;
+  position: fixed;
+  /* 뷰포트기준으로 배치 */
+  left: 0;
+  display: none;
+}
+
+header .main-menu .item:hover .item__contents {
+  display: block;
+}
+
+header .main-menu .item .item__contents .contents__menu {
+  background-color: #2c2a29;
+}
+
+/* > 는 자식선택자, 메뉴안의 모든 ul태그가 아닌 바로 밑에 있는 ul 태그만 선택할때 사용 */
+header .main-menu .item .item__contents .contents__menu>ul {
+  display: flex;
+  padding: 20px 0;
+  /* padding= 내부여백 */
+}
+
+header .main-menu .item .item__contents .contents__menu>ul>li {
+  width: 220px;
+}
+
+header .main-menu .item .item__contents .contents__menu>ul>li h4 {
+  padding: 3px 0 12px 0;
+  font-size: 14px;
+  color: #fff;
+}
+
+header .main-menu .item .item__contents .contents__menu>ul>li ul li {
+  padding: 5px 0;
+  font-size: 12px;
+  color: #999;
+  cursor: pointer;
+}
+
+header .main-menu .item .item__contents .contents__menu>ul>li ul li:hover {
+  color: #669900;
+}
+
+/* link - 아직 클릭하지 않은 경우 */
+header .main-menu .item .item__contents .contents__menu>ul>li ul li>a:link {
+  text-decoration: none;
+  /* 링크의 밑줄 제거 */
+  color: inherit;
+  /* 링크의 색상 제거 */
+}
+
+/* visited - 한번 클릭하거나 전에 클릭한적 있을 경우 */
+header .main-menu .item .item__contents .contents__menu>ul>li ul li>a:visited {
+  color: inherit;
+  text-decoration: none;
+}
+
+header .main-menu .item .item__contents .contents__texture {
+  padding: 26px 0;
+  font-size: 12px;
+  background-image: url("../images/main_menu_pattern.jpg");
+}
+
+header .main-menu .item .item__contents .contents__texture h4 {
+  color: #999;
+  font-weight: 700;
+}
+
+header .main-menu .item .item__contents .contents__texture p {
+  color: #669900;
+  margin: 4px 0 14px;
+  /* top, leftLight, bottom */
+}
+
+header .badges {
+  position: absolute;
+  top: 132px;
+  right: 12px;
+}
+
+header .badges .badge {
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 12px;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, .15);
+  cursor: pointer;
+}
+
+
+/* VISUAL */
+.visual {
+  margin-top: 120px;
+  background-image: url("../images/visual_bg.jpg");
+  background-position: center;
+  /* image를 정가운데에 하나만 두겠다 */
+}
+.visual .inner {
+  height: 646px;
+}
+/* title앞에 .inner 생락 */
+.visual .title {
+  position: absolute;
+  top: 88px;
+  left: -10px;
+}
+.visual .title .btn{
+  position: absolute;
+  top: 259px;
+  left: 173px;
+}
+/* 일치선택자 */
+.visual .cup1.image {
+  position: absolute;
+  bottom: 0;
+  right: -47px;
+}
+.visual .cup1.text {
+  position: absolute;
+  top: 38px;
+  right: 171px;
+}
+.visual .cup2.image {
+  position: absolute;
+  bottom:0;
+  right: 162px;
+}
+.visual .cup2.text {
+  position: absolute;
+  top: 321px;
+  right: 416px;
+}
+.visual .spoon {
+  position: absolute;
+  bottom: 0;
+  left: 275px;
 }
