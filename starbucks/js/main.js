@@ -23,7 +23,7 @@ window.addEventListener('scroll', _.throttle(function () {
     console.log(window.scrollY);
     if (window.scrollY > 500) {
         // 배지 숨기기
-        // gsap.to(요소, 지속시간, 옵션);
+        // gsap.to(요소, 지속시간, 옵션);   애니메이션 처리해주는 라이브러리에서 제공하는 기능
         gsap.to(badgeEl, .6, {
             opacity: 0,
             display: 'none'
@@ -36,3 +36,14 @@ window.addEventListener('scroll', _.throttle(function () {
         });
     }
 }, 300));
+
+// querySelectAll- '' 안에있는 데이터요소를 다 가져온다.
+const fadeEls= document.querySelectorAll('.visual .fade-in');
+// html에서 찾은 fadeEls의 요소들 개수만큼 forEach메소드에 인수로 적은 함수가 실행이된다.
+fadeEls.forEach(function (fadeEl, index) {  // function(요소, 반복된 횟수)
+    // gsap.to(요소, 지속시간, 옵션);   애니메이션 처리해주는 라이브러리에서 제공하는 기능, 지속시간은 초단위
+    gsap.to(fadeEl, 1, {
+        delay: (index+ 1)* .7, // 0.7, 1.4, 2.1, 2.7
+        opacity: 1
+    });
+});
