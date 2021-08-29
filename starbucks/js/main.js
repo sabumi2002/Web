@@ -51,11 +51,11 @@ fadeEls.forEach(function (fadeEl, index) {  // function(요소, 반복된 횟수
 // new Swiper(선택자, 옵션)
 new Swiper('.notice-line .swiper-container', {
     // spaceBetween: 1000,
+    slidesPerView: 1, 
     speed: 300, 
     allowTouchMove: false, // 터치 이동  x
 
     direction: 'vertical', 
     autoplay: true, 
-    loop: true,
 
 });

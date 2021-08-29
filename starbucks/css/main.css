@@ -25,6 +25,7 @@ a {
   position: relative;
   /* 해당영역 배치 */
 }
+
 .btn {
   width: 130px;
   padding: 10px;
@@ -40,40 +41,49 @@ a {
   display: block;
   transform: .4s;
 }
+
 .btn:hover {
   background-color: #333;
   color: #fff;
 }
-.btn.btn--reverse{
+
+.btn.btn--reverse {
   background-color: #333;
   color: #fff;
 }
-.btn.btn--reverse:hover{
+
+.btn.btn--reverse:hover {
   background-color: transparent;
   /* transparent- 투명 */
   color: #333;
 }
-.btn.btn--brown{
+
+.btn.btn--brown {
   color: #592B18;
   border-color: #592B18;
 }
-.btn.btn--brown:hover{
+
+.btn.btn--brown:hover {
   color: #fff;
   background-color: #592B18;
 }
-.btn.btn--gold{
+
+.btn.btn--gold {
   color: #d9aa8a;
   border-color: #d9aa8a;
 }
-.btn.btn--gold:hover{
+
+.btn.btn--gold:hover {
   color: #fff;
   background-color: #d9aa8a;
 }
-.btn.btn--white{
+
+.btn.btn--white {
   color: #fff;
   border-color: #fff;
 }
-.btn.btn--white:hover{
+
+.btn.btn--white:hover {
   color: #333;
   background-color: #fff;
 }
@@ -316,60 +326,69 @@ header .badges .badge {
   background-position: center;
   /* image를 정가운데에 하나만 두겠다 */
 }
+
 .visual .inner {
   height: 646px;
 }
+
 /* title앞에 .inner 생락 */
 .visual .title {
   position: absolute;
   top: 88px;
   left: -10px;
 }
-.visual .title .btn{
+
+.visual .title .btn {
   position: absolute;
   top: 259px;
   left: 173px;
 }
+
 /* 일치선택자 */
 .visual .cup1.image {
   position: absolute;
   bottom: 0;
   right: -47px;
 }
+
 .visual .cup1.text {
   position: absolute;
   top: 38px;
   right: 171px;
 }
+
 .visual .cup2.image {
   position: absolute;
-  bottom:0;
+  bottom: 0;
   right: 162px;
 }
+
 .visual .cup2.text {
   position: absolute;
   top: 321px;
   right: 416px;
 }
+
 .visual .spoon {
   position: absolute;
   bottom: 0;
   left: 275px;
 }
+
 .visual .fade-in {
-  opacity: 0; 
+  opacity: 0;
   /* opacity- 투명도 */
 
 }
 
 /* NOTICE */
-.notice{
+.notice {}
 
-}
-.notice .notice-line{
+.notice .notice-line {
   position: relative;
 }
-.notice .notice-line .bg-left{
+
+.notice .notice-line .bg-left {
   position: absolute;
   top: 0;
   left: 0;
@@ -377,7 +396,8 @@ header .badges .badge {
   height: 100%;
   background-color: #333;
 }
-.notice .notice-line .bg-right{
+
+.notice .notice-line .bg-right {
   position: absolute;
   top: 0;
   right: 0;
@@ -385,11 +405,13 @@ header .badges .badge {
   height: 100%;
   background-color: #f6f5ef;
 }
-.notice .notice-line .inner{
+
+.notice .notice-line .inner {
   height: 62px;
   display: flex;
 }
-.notice .notice-line .inner__left{
+
+.notice .notice-line .inner__left {
   width: 60%;
   height: 100%;
   background-color: #333;
@@ -397,25 +419,32 @@ header .badges .badge {
   /* align-items- 수직 가운데 정렬 */
   align-items: center;
 }
-.notice .notice-line .inner__left h2{
+
+.notice .notice-line .inner__left h2 {
   color: #fff;
   font-size: 17px;
   font-weight: 700;
   margin-right: 20px;
 }
-.notice .notice-line .inner__left .swiper-container{
+
+.notice .notice-line .inner__left .swiper-container {
+  overflow: hidden;
   height: 62px;
-  flex-grow: 1; /* 수평으로 최대한 늘어나라 */
+  flex-grow: 1;
+  /* 수평으로 최대한 늘어나라 */
 }
-.notice .notice-line .inner__left .swiper-slide{
+
+.notice .notice-line .inner__left .swiper-slide {
   height: 62px;
   display: flex;
   align-items: center;
 }
-.notice .notice-line .inner__left .swiper-slide a{
+
+.notice .notice-line .inner__left .swiper-slide a {
   color: #fff;
 }
-.notice .notice-line .inner__left .notice-line__more{
+
+.notice .notice-line .inner__left .notice-line__more {
   width: 62px;
   height: 62px;
   display: flex;
@@ -424,12 +453,14 @@ header .badges .badge {
   /* align-items- 수직 가운데 정렬 */
   align-items: center;
 }
-.notice .notice-line .inner__left .notice-line__more .material-icons{
+
+.notice .notice-line .inner__left .notice-line__more .material-icons {
   color: #fff;
   /* 아이콘의 기본크기는 24px */
-  font-size: 30px; 
+  font-size: 30px;
 }
-.notice .notice-line .inner__right{
+
+.notice .notice-line .inner__right {
   width: 40%;
   height: 100%;
   display: flex;
@@ -437,11 +468,13 @@ header .badges .badge {
   justify-content: flex-end;
   align-items: center;
 }
-.notice .notice-line .inner__right h2{
+
+.notice .notice-line .inner__right h2 {
   font-size: 17px;
   font-weight: 700;
 }
-.notice .notice-line .inner__right .toggle-promotion{
+
+.notice .notice-line .inner__right .toggle-promotion {
   width: 62px;
   height: 62px;
   cursor: pointer;
@@ -449,8 +482,26 @@ header .badges .badge {
   justify-content: center;
   align-items: center;
 }
-.notice .notice-line .inner__right .toggle-promotion .material-icons{
+
+.notice .notice-line .inner__right .toggle-promotion .material-icons {
   font-size: 30px;
 }
 
+.notice .promotion {
+  height: 693px;
+  background-color: #f6f5ef;
+  position: relative;
+}
 
+.notice .promotion .swiper-container {
+  /* calc- 계산해주는 함수 */
+  width: calc(819px * 3 + 20px);
+  height: 553px;
+  background-color: orange;
+  text-align: center;
+  font-size: 200px;
+  position: absolute;
+  top: 40px;
+  left: 50%;
+  margin-left: calc((819px * 3 + 20px) / -2);
+}
